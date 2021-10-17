@@ -1,0 +1,24 @@
+/* div{
+    color: white;
+} */
+.recipeDetail {
+  border: 1px solid rgb(192, 189, 189);
+  border-radius: 10px;
+  box-shadow: 0px 0px 0px;
+  transition: box-shadow 1s;
+  padding: 20px;
+}
+img {
+  border-radius: 10px;
+}
+.recipeDetail:hover {
+  box-shadow: 5px 5px 15px gray;
+}
+
+button {
+  box-shadow: 5px 5px 5px grey;
+  transition: all 0.5s;
+}
+button:hover {
+  box-shadow: 0px 0px 0px;
+}

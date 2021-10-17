@@ -1,0 +1,8 @@
+button{
+  box-shadow: 0 0 0;
+  transition: box-shadow 1s;
+}
+
+button:hover{
+  box-shadow: 3px 4px 5px green;
+}
