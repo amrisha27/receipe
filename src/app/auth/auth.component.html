@@ -1,0 +1,67 @@
+<div class="row">
+  <div class="col-xs-4 col-xs-offset-1 col-sm-offset-3 col-md-offset-4">
+    <!-- <div class="alert alert-danger" *ngIf="error">
+      {{ error }}
+    </div> -->
+    <app-alert
+      [message]="error"
+      *ngIf="error"
+      (close)="onHandleError()"
+    ></app-alert>
+    <div *ngIf="isLoading" style="text-align: center;">
+      <loading-spinner></loading-spinner>
+    </div>
+    <div class="user_card" *ngIf="!isLoading">
+      <div class="img" align="center">
+        <img
+          src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png"
+          class="logo"
+        />
+      </div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <form (ngSubmit)="onSubmit(authForm)" #authForm="ngForm">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            class="form-control"
+            ngModel
+            name="email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            class="form-control"
+            ngModel
+            name="password"
+            required
+            minlength="6"
+          />
+        </div>
+        <br />
+        <hr />
+        <div class="buttons" align="center">
+          <button
+            class="btn btn-primary"
+            type="submit"
+            [disabled]="!authForm.valid"
+          >
+            {{ isLoginMode ? "Login" : "Sign Up" }}
+          </button>
+          |
+          <button class="btn btn-primary" type="button" (click)="switchMode()">
+            Switch to {{ isLoginMode ? "Sign Up" : "Login" }}
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

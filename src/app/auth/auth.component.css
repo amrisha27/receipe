@@ -1,0 +1,56 @@
+.container {
+  background-color: #f39c12;
+}
+.user_card {
+  height: 400px;
+  width: 350px;
+  margin-top: -900px;
+  margin-bottom: auto;
+  background: #f39c12;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+  animation: opening 1s forwards;
+}
+@keyframes opening {
+  from {
+    margin-top: -900px;
+  }
+  to {
+    margin-top: 60px;
+  }
+}
+.img {
+  position: absolute;
+  height: 170px;
+  width: 170px;
+  top: -85px;
+  left: 90px;
+  border-radius: 50%;
+  background: #60a3bc;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0px 0px 15px grey;
+}
+.logo {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+loading-spinner {
+  align-self: center;
+}
+
+button {
+  box-shadow: 5px 5px 5px rgb(99, 99, 99);
+  border-radius: 15px;
+}
